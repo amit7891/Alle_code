@@ -1,0 +1,54 @@
+<% include ../partials/header %>
+
+<div class="" style="margin-left:30px;margin-right:30px">
+    <div class="col s12">
+        <a href="/customer/add" class=" btn btn-success btn-lg"> Add a new customer</a>
+    </div>
+</div>
+<br>
+<div class="=" style="margin-left:30px;margin-right:30px">
+    <div class="col s12">
+        <% if (items.length > 0) { %>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th style="width: 1%; text-align: center">ID</th>
+                    <th style="width : 30%; text-align: ">First Name</th>
+                    <th style="width : 49%; text-align: left">Last Name</th>
+                    <th style="width: 49%; text-align: left"> Email</th>
+                    <th style="width: 1%; text-align: left">IP</th>
+                    <th colspan="4" style="width: 20%; text-align: center">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% items.forEach(function(item, index){ %>
+                <tr>
+                    <td style="width: 1%; text-align: center">
+                        <%= index + 1 %>
+                    </td>
+                    <td style="width: 25% ; text-align: center">
+                        <%= item.first_name %>
+                    </td>
+                    <td style="width: 40%">
+                            <%= item.last_name %>
+                        </td>
+                    <td style="width: 20%">
+                        <%= item.email %>
+                    </td>
+                    <td style="width: 10%">
+                        <%= item.ip %>
+                    </td>
+                    <td solspan="2" style="width:20%; text-align:center">
+                        <a href="/customer/edit/<%= item.id %>" class="btn btn-success">Edit</a>
+                        <a href="/customer/delete/<%= item.id %>" class="btn btn-success">Delete</a>
+                    </td>
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
+        <% }else{ %>
+        <p><strong>There are no records available</strong></p>
+        <% } %>
+   </div>
+</div>
+<% include ../partials/footer %>

@@ -1,0 +1,48 @@
+<% include ../partials/header %>
+<div class="row" style="margin-left:30px;margin-right:30px">
+    <form action="http://localhost:3000/customer/add" method="post" class="col s12">
+        <div class="form-group row">
+            <label for="first_name" class="col-2 col-form-label"> First Name </label>
+            <div class="ecol-10">
+                <input type="text" name="first_name" value="" class="form-control">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="last_name" class="col-2 col-form-label">Last Name</label>
+            <div class="col-10">
+                <input type="text" name="last_name" value="" class="form-control">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-2 col-form-label">Email </label>
+            <div class="col-10"></div>
+            <input type="text" name="email" value="" class="form-control">
+        </div>
+        <div class="form-group row">
+                <label for="ip" class="col-2 col-form-label">IP </label>
+                <div class="col-10"></div>
+                <input type="text" name="ip" value="" class="form-control">
+            </div>
+            <div class="form-group row">
+                    <label for="longitude" class="col-2 col-form-label">Longitude </label>
+                    <div class="col-10"></div>
+                    <input type="text" name="longitude" value="" class="form-control">
+                </div>
+                <div class="form-group row">
+                        <label for="latitude" class="col-2 col-form-label">Latitude </label>
+                        <div class="col-10"></div>
+                        <input type="text" name="latitude" value="" class="form-control">
+                    </div>
+</div>
+
+<div class="form-group row">
+    <div class="form-group row">
+        <label for="submit" class="col-2 col-form-label" style="color:#ffffff"> Click here to
+            submit</label>
+        <div class="col-10"></div>
+        <input type="submit" name="submit" value="Save customer" class="btn btn-primary btn-1g">
+    </div>
+</div>
+</form>
+
+<% include ../partials/footer %>

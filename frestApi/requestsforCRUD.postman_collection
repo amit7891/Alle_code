@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "70978704-fb91-43c3-9808-9ceb6b55402c",
+		"name": "CRUD for allegiant",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"0\",\r\n    \"email\": \"amit.etiel@email.com\",\r\n    \"first_name\": \"Ameat\",\r\n    \"last_name\": \"Etal\",\r\n    \"ip\": \"192.168.02\",\r\n    \"latitude\": \"12.112\",\r\n    \"longitude\": \"-23.35\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customer"
+					]
+				},
+				"description": "post request for inserting a new entry"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/customer",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"2028\",\r\n    \"email\": \"amit@email.com\",\r\n    \"first_name\": \"amiut\",\r\n    \"last_name\": \"Etlel\",\r\n    \"ip\": \"192.169.234\",\r\n    \"latitude\": \"12.56\",\r\n    \"longitude\": \"-23.97\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customer"
+					]
+				},
+				"description": "update request for updating sql table"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/customer/id/1000",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3000/customer/id/1000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customer",
+						"id",
+						"1000"
+					]
+				},
+				"description": "get request for updating entry in the table"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/customer/id/1000",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/customer/id/1000",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"customer",
+						"id",
+						"1000"
+					]
+				},
+				"description": "delete request by id"
+			},
+			"response": []
+		}
+	]
+}
