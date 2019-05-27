@@ -1,9 +1,9 @@
 <% include ../partials/header %>
 <br>
 <div class="row" style="margin-left:30px;margin-right:30px"></div>
-<form action="http://localhost:3000/customer/edit/<%= item[0].id %>" method="post" class="col s12">
+<form action="http://localhost:3000/customer/search/<%= item[0].email %>" method="post" class="col s12">
     
-    <input type="hidden" name ="id" value="<%= item[0].id %>" >
+    <input type="hidden" name ="email" value="<%= item[0].email %>" >
     <input type="hidden" name ="updated_at" value="<%= item[0].updated_at %>" >
 <div class="form-group row">
         <label for="last_name" class="col-2 col-form-label"> Last Name</label>

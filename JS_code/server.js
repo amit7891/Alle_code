@@ -99,5 +99,16 @@ app.get('/customer/edit/:id', (req, res) => {
     });
 });
     });
+
+    app.get('/customer/search/:email', (req, res) => {
+        mysqlConnection.query('SELECT * FROM customers1.customers WHERE email=? ', [req.params.email], (err, result) => {
+            
+            res.render('pages/index', {
+                siteTitle : siteTitle,
+                pageTitle : "Search and edit",
+                items : result
+        });
+    });
+        });
 app.listen(3000, () => console.log('Express server is running at port number 3000'));
 
